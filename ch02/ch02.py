@@ -26,10 +26,8 @@ def solve() -> None:
     message: str = readfile("./ch02/message_02.txt")
     message = message.lower().strip()
 
-    acum: int = 0
-    result: str = ""
+    value: int = 0
 
     for letter in message:
         operation = operations[letter]
-        acum = operation(acum)
-    print(result)
+        value = operation(value)
