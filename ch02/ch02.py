@@ -17,8 +17,8 @@ from utils.files import readfile
 operations: dict[str, Callable] = {
     "#": lambda x: x + 1,
     "@": lambda x: x - 1,
-    "*": lambda x, y: x * y,
-    "&": lambda x, y: f"{x}{y}",
+    "*": lambda x: x * x,
+    "&": lambda x: print(x, end="") or x,
 }
 
 
@@ -31,11 +31,5 @@ def solve() -> None:
 
     for letter in message:
         operation = operations[letter]
-        match letter:
-            case "#" | "@":
-                acum = operation(acum)
-            case "*":
-                acum = operation(acum, acum)
-            case "&":
-                result = operation(result, acum)
+        acum = operation(acum)
     print(result)
