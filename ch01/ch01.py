@@ -6,7 +6,6 @@ cup te a cup -> cup2te1a1
 houses house housess -> houses1house1housess1
 """
 
-
 from utils.files import readfile
 
 counter_words: dict[str, int] = {}

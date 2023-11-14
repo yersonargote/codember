@@ -1,8 +1,10 @@
-from ch01.ch01 import solve
+# from ch01 import ch01
+from ch02 import ch02
 
 
 def main():
-    solve()
+    # ch01.solve()
+    ch02.solve()
 
 
 if __name__ == "__main__":
