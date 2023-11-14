@@ -28,6 +28,6 @@ def solve() -> None:
 
     value: int = 0
 
-    for letter in message:
-        operation = operations[letter]
+    for symbol in message:
+        operation = operations[symbol]
         value = operation(value)
