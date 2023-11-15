@@ -10,11 +10,9 @@ Explanation: Print (0), increment (1), increment (2), print (2), multiply (4), p
 """
 
 
-from collections.abc import Callable
-
 from utils.files import readfile
 
-operations: dict[str, Callable] = {
+operations: dict = {
     "#": lambda x: x + 1,
     "@": lambda x: x - 1,
     "*": lambda x: x * x,
@@ -24,7 +22,7 @@ operations: dict[str, Callable] = {
 
 def solve() -> None:
     message: str = readfile("./ch02/message_02.txt")
-    message = message.lower().strip()
+    message = message.strip()
 
     value: int = 0
 
