@@ -1,8 +1,8 @@
 def readfile(path: str) -> str:
+    lines: list = []
     with open(path, "r") as file:
-        lines: list = file.readlines()
-    lines_str: str = "".join(lines)
-    return lines_str
+        lines = file.readlines()
+    return lines
 
 
 def writefile(path: str, content: str) -> None:

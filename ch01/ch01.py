@@ -11,20 +11,20 @@ from utils.files import readfile
 counter_words: dict[str, int] = {}
 
 
-def solve() -> None:
-    message: str = readfile("./ch01/message_01.txt")
-    message = message.lower().strip()
+def solve() -> str:
+    lines: list = readfile("./ch01/message_01.txt")
+    message = "\n".join(lines).lower().strip()
 
     words: list = message.split(" ")
 
     for word in words:
         try:
             counter_words[word] += 1
-        except:
+        except KeyError:
             counter_words[word] = 1
 
     result: str = ""
     for key, value in counter_words.items():
         result += f"{key}{value}"
 
-    print(result)
+    return result
