@@ -5,15 +5,11 @@ keys house HOUSE house keys -> keys2house3
 cup te a cup -> cup2te1a1
 houses house housess -> houses1house1housess1
 """
+from collections import Counter
 
 
 def solve(words: list) -> str:
-    counter_words: dict[str, int] = {}
-    for word in words:
-        if word in counter_words:
-            counter_words[word] += 1
-        else:
-            counter_words[word] = 1
+    counter_words: Counter = Counter(words)
 
     result: str = ""
     for key, value in counter_words.items():
