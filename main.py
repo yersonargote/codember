@@ -1,17 +1,6 @@
-# from ch01 import ch01
-# from ch02 import ch02
-# from ch03 import ch03
-# from ch04 import ch04
-from ch05 import ch05
+import unittest
 
-
-def main():
-    # ch01.solve()
-    # ch02.solve()
-    # ch03.solve()
-    # ch04.solve()
-    ch05.solve()
-
+from tests.ch01.test_ch01 import TestCh01
 
 if __name__ == "__main__":
-    main()
+    unittest.main()

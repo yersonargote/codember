@@ -6,17 +6,9 @@ cup te a cup -> cup2te1a1
 houses house housess -> houses1house1housess1
 """
 
-from utils.files import readfile
 
-counter_words: dict[str, int] = {}
-
-
-def solve() -> str:
-    lines: list = readfile("./ch01/message_01.txt")
-    message = "\n".join(lines).lower().strip()
-
-    words: list = message.split(" ")
-
+def solve(words: list) -> str:
+    counter_words: dict[str, int] = {}
     for word in words:
         try:
             counter_words[word] += 1
