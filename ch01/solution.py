@@ -10,9 +10,9 @@ houses house housess -> houses1house1housess1
 def solve(words: list) -> str:
     counter_words: dict[str, int] = {}
     for word in words:
-        try:
+        if word in counter_words:
             counter_words[word] += 1
-        except KeyError:
+        else:
             counter_words[word] = 1
 
     result: str = ""
